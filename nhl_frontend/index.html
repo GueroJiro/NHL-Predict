@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NHL Predict</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/nhl-logo.png" alt="NHL">
+            <span>NHL <strong>Predict</strong></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html" class="active">
+                <i class="fa-solid fa-house"></i> Inicio
+            </a>
+
+            <a href="equipos.html">
+                <i class="fa-solid fa-shield-halved"></i> Equipos
+            </a>
+
+            <a href="standings.html">
+                <i class="fa-solid fa-chart-column"></i> Standings
+            </a>
+
+            <a href="partidos.html">
+                <i class="fa-solid fa-calendar-days"></i> Partidos
+            </a>
+
+            <a href="playoffs.html">
+                <i class="fa-solid fa-trophy"></i> Playoffs
+            </a>
+
+            <a href="predicciones.html">
+                <i class="fa-solid fa-crystal-ball"></i> Predicciones
+            </a>
+        </div>
+    </nav>
+
+    <main>
+
+        <section class="hero">
+            <div class="hero-content">
+
+                <div class="hero-left">
+                    <span class="hero-tag">NHL Analytics Platform</span>
+
+                    <h1>
+                        PREDICE.<br>
+                        ANALIZA.<br>
+                        GANA.
+                    </h1>
+
+                    <p>
+                        Sistema de análisis y predicción de partidos NHL basado en
+                        estadísticas históricas, standings, playoffs y modelos
+                        predictivos desarrollados con MySQL y Node.js.
+                    </p>
+
+                    <div class="hero-buttons">
+                        <a href="predicciones.html" class="btn-primary">
+                            <i class="fa-solid fa-wand-magic-sparkles"></i>
+                            Generar Predicción
+                        </a>
+
+                        <a href="equipos.html" class="btn-secondary">
+                            <i class="fa-solid fa-hockey-puck"></i>
+                            Ver Equipos
+                        </a>
+                    </div>
+                </div>
+
+                <div class="hero-right">
+                    <div class="featured-match">
+
+                        <span class="match-title">
+                            Partido Destacado
+                        </span>
+
+                        <div class="teams">
+                            <div class="team">
+                                <img id="logoLocal" src="img/nhl-logo.png" alt="Equipo local">
+                                <h3 id="abbrLocal">---</h3>
+                                <p id="nombreLocal">Cargando...</p>
+                            </div>
+
+                            <div class="vs">VS</div>
+
+                            <div class="team">
+                                <img id="logoVisitante" src="img/nhl-logo.png" alt="Equipo visitante">
+                                <h3 id="abbrVisitante">---</h3>
+                                <p id="nombreVisitante">Cargando...</p>
+                            </div>
+                        </div>
+
+                        <div class="probability-title">
+                            Probabilidad de victoria
+                        </div>
+
+                        <div class="probability-numbers">
+                            <span id="probLocal">--%</span>
+                            <span id="probVisitante">--%</span>
+                        </div>
+
+                        <div class="win-bar">
+                            <div id="barraLocal" class="home-bar"></div>
+                            <div id="barraVisitante" class="away-bar"></div>
+                        </div>
+
+                        <a href="predicciones.html" class="match-button">
+                            Ver Predicción
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="stats-section">
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <div>
+                    <h2>33</h2>
+                    <p>Equipos NHL</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-calendar-check"></i>
+                </div>
+                <div>
+                    <h2>7523</h2>
+                    <p>Partidos</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                    <h2>15046</h2>
+                    <p>Estadísticas</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <div>
+                    <h2>5</h2>
+                    <p>Temporadas</p>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="dashboard-section">
+
+            <div class="section-header">
+                <h2>Panel Principal</h2>
+                <p>Accede a toda la información y herramientas del sistema</p>
+            </div>
+
+            <div class="dashboard-grid">
+
+                <a href="equipos.html" class="module-card equipos">
+                    <img src="img/icons/teams.png" class="module-icon" alt="Equipos">
+                    <h3>Equipos</h3>
+                    <p>Explora estadísticas y datos de los equipos.</p>
+                </a>
+
+                <a href="standings.html" class="module-card standings">
+                    <img src="img/icons/standings.png" class="module-icon" alt="Standings">
+                    <h3>Standings</h3>
+                    <p>Consulta las tablas de posiciones por temporada.</p>
+                </a>
+
+                <a href="partidos.html" class="module-card partidos">
+                    <img src="img/icons/games.png" class="module-icon" alt="Partidos">
+                    <h3>Partidos</h3>
+                    <p>Revisa partidos programados y resultados registrados.</p>
+                </a>
+
+                <a href="playoffs.html" class="module-card playoffs">
+                    <img src="img/icons/playoffs.png" class="module-icon" alt="Playoffs">
+                    <h3>Playoffs</h3>
+                    <p>Sigue la lucha por la Stanley Cup.</p>
+                </a>
+
+                <a href="predicciones.html" class="module-card predicciones">
+                    <img src="img/icons/predictions.png" class="module-icon" alt="Predicciones">
+                    <h3>Predicciones</h3>
+                    <p>Genera predicciones inteligentes usando estadísticas.</p>
+                </a>
+
+            </div>
+
+        </section>
+
+        <section class="features-section">
+
+            <div class="section-header">
+                <h2>¿Qué hace el sistema?</h2>
+                <p>Herramientas principales que integran el proyecto NHL Predict</p>
+            </div>
+
+            <div class="features-grid">
+
+                <div class="feature-card feature-blue">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-database"></i>
+                    </div>
+                    <div>
+                        <h3>Base de Datos</h3>
+                        <p>Estadísticas reales de la NHL almacenadas en MySQL.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card feature-purple">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-code-branch"></i>
+                    </div>
+                    <div>
+                        <h3>Backend</h3>
+                        <p>Procesamiento de datos y consultas usando Node.js.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card feature-red">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-laptop-code"></i>
+                    </div>
+                    <div>
+                        <h3>Frontend</h3>
+                        <p>Interfaz moderna, rápida y fácil de utilizar.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card feature-gold">
+                    <div class="feature-icon">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <div>
+                        <h3>Predicción Inteligente</h3>
+                        <p>Algoritmos que combinan estadísticas para mejores resultados.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script>
+    const API_PARTIDOS = 'http://localhost:5001/api/partidos';
+    const API_PREDICCIONES = 'http://localhost:5001/api/predicciones/generar';
+
+    function obtenerAbreviacionEquipo(nombreEquipo) {
+        const abreviaciones = {
+            "Anaheim Ducks": "ANA",
+            "Arizona Coyotes": "ARI",
+            "Boston Bruins": "BOS",
+            "Buffalo Sabres": "BUF",
+            "Calgary Flames": "CGY",
+            "Carolina Hurricanes": "CAR",
+            "Chicago Blackhawks": "CHI",
+            "Colorado Avalanche": "COL",
+            "Columbus Blue Jackets": "CBJ",
+            "Dallas Stars": "DAL",
+            "Detroit Red Wings": "DET",
+            "Edmonton Oilers": "EDM",
+            "Florida Panthers": "FLA",
+            "Los Angeles Kings": "LAK",
+            "Minnesota Wild": "MIN",
+            "Montreal Canadiens": "MTL",
+            "Montréal Canadiens": "MTL",
+            "Nashville Predators": "NSH",
+            "New Jersey Devils": "NJD",
+            "New York Islanders": "NYI",
+            "New York Rangers": "NYR",
+            "Ottawa Senators": "OTT",
+            "Philadelphia Flyers": "PHI",
+            "Pittsburgh Penguins": "PIT",
+            "San Jose Sharks": "SJS",
+            "Seattle Kraken": "SEA",
+            "St. Louis Blues": "STL",
+            "Tampa Bay Lightning": "TBL",
+            "Toronto Maple Leafs": "TOR",
+            "Utah Hockey Club": "UTA",
+            "Vancouver Canucks": "VAN",
+            "Vegas Golden Knights": "VGK",
+            "Washington Capitals": "WSH",
+            "Winnipeg Jets": "WPG"
+        };
+
+        return abreviaciones[nombreEquipo] || nombreEquipo;
+    }
+
+    async function cargarPartidoDestacado() {
+        try {
+            const respuestaPartidos = await fetch(`${API_PARTIDOS}?proximos=true&limite=1`);
+            const dataPartidos = await respuestaPartidos.json();
+
+            const partido = dataPartidos.partidos[0];
+
+            if (!partido) {
+                throw new Error('No hay próximos partidos');
+            }
+
+            const abbrLocal = obtenerAbreviacionEquipo(partido.Equipo_Local);
+            const abbrVisitante = obtenerAbreviacionEquipo(partido.Equipo_Visitante);
+
+            const respuestaPrediccion = await fetch(API_PREDICCIONES, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    equipoLocal: abbrLocal,
+                    equipoVisitante: abbrVisitante
+                })
+            });
+
+            const data = await respuestaPrediccion.json();
+
+            if (!respuestaPrediccion.ok) {
+                throw new Error(data.mensaje || 'Error al generar predicción');
+            }
+
+            const probLocal = Number(data.probabilidad_local);
+            const probVisitante = Number(data.probabilidad_visitante);
+
+            document.querySelector('.match-title').textContent = 'Próximo Partido';
+
+            document.getElementById('abbrLocal').textContent = abbrLocal;
+            document.getElementById('abbrVisitante').textContent = abbrVisitante;
+
+            document.getElementById('nombreLocal').textContent = partido.Equipo_Local;
+            document.getElementById('nombreVisitante').textContent = partido.Equipo_Visitante;
+
+            document.getElementById('probLocal').textContent = `${probLocal}%`;
+            document.getElementById('probVisitante').textContent = `${probVisitante}%`;
+
+            document.getElementById('barraLocal').style.width = `${probLocal}%`;
+            document.getElementById('barraVisitante').style.width = `${probVisitante}%`;
+
+            document.getElementById('logoLocal').src = `img/${abbrLocal}.png`;
+            document.getElementById('logoVisitante').src = `img/${abbrVisitante}.png`;
+
+            document.getElementById('logoLocal').alt = partido.Equipo_Local;
+            document.getElementById('logoVisitante').alt = partido.Equipo_Visitante;
+
+        } catch (error) {
+            console.error(error);
+
+            document.getElementById('nombreLocal').textContent = 'No disponible';
+            document.getElementById('nombreVisitante').textContent = 'No disponible';
+            document.getElementById('probLocal').textContent = '--%';
+            document.getElementById('probVisitante').textContent = '--%';
+        }
+    }
+
+    cargarPartidoDestacado();
+</script>
+
+</body>
+
+</html>

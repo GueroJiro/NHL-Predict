@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <meta charset="UTF-8">
+    <title>Predicciones - NHL Predict</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+    <nav class="navbar">
+    <div class="nav-logo">
+        <img src="img/nhl-logo.png" alt="NHL">
+        <span>NHL <strong>Predict</strong></span>
+    </div>
+
+    <div class="nav-links">
+        <a href="index.html">
+            <i class="fa-solid fa-house"></i> Inicio
+        </a>
+
+        <a href="equipos.html">
+            <i class="fa-solid fa-shield-halved"></i> Equipos
+        </a>
+
+        <a href="standings.html">
+            <i class="fa-solid fa-chart-column"></i> Standings
+        </a>
+
+        <a href="partidos.html">
+            <i class="fa-solid fa-calendar-days"></i> Partidos
+        </a>
+
+        <a href="playoffs.html">
+            <i class="fa-solid fa-trophy"></i> Playoffs
+        </a>
+
+        <a href="predicciones.html" class="active">
+            <i class="fa-solid fa-crystal-ball"></i> Predicciones
+        </a>
+    </div>
+</nav>
+
+<main class="page-main">
+
+    <section class="page-hero">
+        <span class="hero-tag">NHL Prediction Engine</span>
+
+        <h1>Predicciones NHL</h1>
+
+        <p>
+            Genera predicciones inteligentes utilizando estadísticas,
+            victorias, puntos, goles y rendimiento histórico de los equipos.
+        </p>
+    </section>
+
+    <section class="table-section">
+
+        <div class="section-header">
+            <h2>Generar Predicción</h2>
+            <p>Selecciona dos equipos y analiza el resultado esperado</p>
+        </div>
+
+        <div class="prediction-form">
+
+            <div class="filter-box">
+                <label>
+                    <i class="fa-solid fa-house"></i>
+                    Equipo Local
+                </label>
+
+                <select id="equipoLocal">
+
+                    <!-- PEGA AQUÍ TODAS TUS OPCIONES ACTUALES -->
+
+                </select>
+            </div>
+
+            <div class="filter-box">
+                <label>
+                    <i class="fa-solid fa-plane"></i>
+                    Equipo Visitante
+                </label>
+
+                <select id="equipoVisitante">
+
+                    <!-- PEGA AQUÍ TODAS TUS OPCIONES ACTUALES -->
+
+                </select>
+            </div>
+
+            <button id="btnPredecir" class="prediction-button">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                Generar Predicción
+            </button>
+
+        </div>
+
+        <div id="resultado-prediccion"></div>
+
+    </section>
+
+</main>
+
+<script src="js/predicciones.js"></script>
+</body>
+</html>

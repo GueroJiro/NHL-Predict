@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playoffs - NHL Predict</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/nhl-logo.png" alt="NHL">
+            <span>NHL <strong>Predict</strong></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i> Inicio
+            </a>
+
+            <a href="equipos.html">
+                <i class="fa-solid fa-shield-halved"></i> Equipos
+            </a>
+
+            <a href="standings.html">
+                <i class="fa-solid fa-chart-column"></i> Standings
+            </a>
+
+            <a href="partidos.html">
+                <i class="fa-solid fa-calendar-days"></i> Partidos
+            </a>
+
+            <a href="playoffs.html" class="active">
+                <i class="fa-solid fa-trophy"></i> Playoffs
+            </a>
+
+            <a href="predicciones.html">
+                <i class="fa-solid fa-crystal-ball"></i> Predicciones
+            </a>
+        </div>
+    </nav>
+
+    <main class="page-main">
+
+        <section class="page-hero">
+            <span class="hero-tag">NHL Playoffs Database</span>
+
+            <h1>Playoffs NHL</h1>
+
+            <p>
+                Consulta todas las series de playoffs, rondas disputadas,
+                enfrentamientos y campeones de cada temporada.
+            </p>
+        </section>
+
+        <section class="table-section">
+
+            <div class="section-header">
+                <h2>Series de Playoffs</h2>
+                <p>Historial completo de eliminatorias NHL</p>
+            </div>
+
+            <div class="standings-tools">
+
+                <div class="filter-box">
+                    <label>
+                        <i class="fa-solid fa-calendar-days"></i>
+                        Temporada
+                    </label>
+
+                    <select id="filtro-temporada">
+                        <option value="2025-2026">2025-2026</option>
+                        <option value="2024-2025">2024-2025</option>
+                        <option value="2023-2024">2023-2024</option>
+                        <option value="2022-2023">2022-2023</option>
+                        <option value="2021-2022">2021-2022</option>
+                    </select>
+                </div>
+
+                <div class="filter-box">
+                    <label>
+                        <i class="fa-solid fa-trophy"></i>
+                        Ronda
+                    </label>
+
+                    <select id="filtro-ronda">
+                        <option value="">Todas</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div class="teams-counter">
+                <i class="fa-solid fa-medal"></i>
+                <span id="contador-playoffs">
+                    Series encontradas: 0
+                </span>
+            </div>
+
+            <br>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Ronda</th>
+                            <th>Equipo 1</th>
+                            <th>Equipo 2</th>
+                            <th>Resultado</th>
+                            <th>Juegos E1</th>
+                            <th>Juegos E2</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-playoffs">
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/playoffs.js"></script>
+
+</body>
+
+</html>

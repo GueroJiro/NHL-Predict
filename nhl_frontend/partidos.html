@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partidos - NHL Predict</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-logo">
+            <img src="img/nhl-logo.png" alt="NHL">
+            <span>NHL <strong>Predict</strong></span>
+        </div>
+
+        <div class="nav-links">
+            <a href="index.html">
+                <i class="fa-solid fa-house"></i> Inicio
+            </a>
+
+            <a href="equipos.html">
+                <i class="fa-solid fa-shield-halved"></i> Equipos
+            </a>
+
+            <a href="standings.html">
+                <i class="fa-solid fa-chart-column"></i> Standings
+            </a>
+
+            <a href="partidos.html" class="active">
+                <i class="fa-solid fa-calendar-days"></i> Partidos
+            </a>
+
+            <a href="playoffs.html">
+                <i class="fa-solid fa-trophy"></i> Playoffs
+            </a>
+
+            <a href="predicciones.html">
+                <i class="fa-solid fa-crystal-ball"></i> Predicciones
+            </a>
+        </div>
+    </nav>
+
+    <main class="page-main">
+
+        <section class="page-hero">
+            <span class="hero-tag">NHL Games Database</span>
+
+            <h1>Partidos NHL</h1>
+
+            <p>
+                Consulta resultados históricos, próximos partidos y predicciones
+                de los encuentros pendientes.
+            </p>
+        </section>
+
+        <section class="table-section">
+
+            <section class="proximos-partidos-section">
+                <div class="section-header">
+                    <h2>Próximos Partidos</h2>
+                    <p>Partidos pendientes con predicción generada</p>
+                </div>
+
+                <div id="cards-proximos-partidos" class="cards-proximos-partidos"></div>
+            </section>
+
+            <div class="section-header">
+                <h2>Resultados de Partidos</h2>
+                <p>Más de 7500 partidos registrados en la base de datos</p>
+            </div>
+
+            <div class="standings-tools">
+
+                <div class="filter-box">
+                    <label>
+                        <i class="fa-solid fa-calendar-day"></i>
+                        Fecha específica
+                    </label>
+
+                    <input type="date" id="filtro-fecha">
+                </div>
+
+                <div class="filter-box">
+                    <label>
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        Buscar
+                    </label>
+
+                    <button id="btn-buscar-fecha" class="filter-button">
+                        Buscar fecha
+                    </button>
+                </div>
+
+                <div class="filter-box">
+                    <label>
+                        <i class="fa-solid fa-rotate-left"></i>
+                        Reiniciar
+                    </label>
+
+                    <button id="btn-limpiar-fecha" class="filter-button">
+                        Limpiar
+                    </button>
+                </div>
+
+            </div>
+
+            <div class="teams-counter">
+                <i class="fa-solid fa-hockey-puck"></i>
+                <span id="contador-resultados">
+                    Resultados encontrados: 0 partidos
+                </span>
+            </div>
+
+            <br>
+
+            <div class="table-container">
+
+                <table>
+
+                    <thead>
+                        <tr>
+                            <th>Fecha</th>
+                            <th>Local</th>
+                            <th>GL</th>
+                            <th>GV</th>
+                            <th>Visitante</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="tabla-partidos"></tbody>
+
+                </table>
+
+            </div>
+
+            <div class="paginacion-partidos">
+                <button id="btn-anterior">
+                    <i class="fa-solid fa-chevron-left"></i>
+                    Anterior
+                </button>
+
+                <span id="info-pagina">
+                    Página 1 de 1
+                </span>
+
+                <button id="btn-siguiente">
+                    Siguiente
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="js/partidos.js"></script>
+
+</body>
+
+</html>
